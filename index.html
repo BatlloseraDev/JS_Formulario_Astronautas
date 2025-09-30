@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Formulario: Astronautas</title>
+</head>
+<body>
+    <form id="formulario" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" pattern="[A-Za-z]{3,}" required><br>
+    
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Introduce tu email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required><br>
+        
+        <label for="contrasenia">Contraseña:</label>
+        <input type="password" id="contrasenia" name="contrasenia" placeholder="Introduce tu contraseña" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$!%*?&]).{8,}" required><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" placeholder="Introduce tu edad" min="25" max="50" required><br>
+
+        <label for="especialidad">Especialidad:</label><br>
+        <label><input type="radio" name="especialidad" value="Piloto">Piloto</label>
+        <label><input type="radio" name="especialidad" value="Ingeniero">Ingeniero</label>
+        <label><input type="radio" name="especialidad" value="Médico">Médico</label>
+        <label><input type="radio" name="especialidad" value="Científico">Científico</label>
+        <br>
+        <label for="planeta">Planeta:</label>
+        <select id="planeta" name="planeta" required>
+            <option value="Tierra">Tierra</option>
+            <option value="Marte">Marte</option>
+            <option value="Jupiter">Jupiter</option>
+            <option value="Saturno">Saturno</option>
+            <option value="Urano">Urano</option>
+            <option value="Neptuno">Neptuno</option>
+            <option value="Mercurio">Mercurio</option>
+            <option value="Venus">Venus</option>
+        </select><br>
+
+        <label for="fechaDisponibilidad">Fecha de Disponibilidad:</label>
+        <input type="date" id="fechaDisponibilidad" name="fechaDisponibilidad"  required><br>
+
+        <label for="condicionFisica">Condición Física:</label><br>
+        <input type="number" id="condicionFisica" name="condicionFisica" min="1" max="10" required><br><!--Validar por js que minimo sea 7-->
+
+        <label for="expedienteMedico">Expediente Médico:</label><br>
+        <input type="file" id="expedienteMedico" name="expedienteMedico" accept=".pdf" required><br>
+
+        <label for="comentarios">Comentarios:</label><br>
+        <textarea id="comentarios" name="comentarios" minlength="10" placeholder="Introduce tus comentarios..." required></textarea><br>
+
+        <label for="riesgos">Acepta los riesgos de la mision:</label>
+        <input type="checkbox" id="riesgos" name="riesgos" required><br>
+        
+
+
+
+        <input type="submit" value="Enviar">
+
+    </form>
+
+    <script src="js/validacion.js"></script>
+</body>
+</html>

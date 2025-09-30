@@ -1,0 +1,17 @@
+input:required{
+    border-left: 5px solid rgb(62, 114, 255);
+}
+
+input:valid{
+    border-left: 5px solid rgb(78, 255, 62);
+}
+
+input:invalid{
+    border-left: 5px solid rgb(255, 62, 62);
+}
+
+input:focus{
+    outline: none;
+    border-color: rgb(109, 184, 253);
+    box-shadow: 0 0 8px rgba(84, 141, 196, 0.6);
+}

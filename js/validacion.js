@@ -7,7 +7,7 @@ const validarFecha = (e)=>{
     const hoy = new Date().toISOString().split("T")[0]; // formato YYYY-MM-DD
     fecha.min= hoy;
     if(fecha.value > hoy){
-        document.getElementById("fechaDisponibilidad").
+        document.getElementById("fechaDisponibilidad");
         resultado = true
     }
     
